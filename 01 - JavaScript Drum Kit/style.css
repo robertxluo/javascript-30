@@ -7,7 +7,7 @@ html {
 body,html {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .keys {
@@ -45,7 +45,7 @@ kbd {
 
 .sound {
   font-size: 1.2rem;
-  text-transform: uppercase;
+  text-transform: lowercase;
   letter-spacing: .1rem;
   color: #ffc600;
 }
