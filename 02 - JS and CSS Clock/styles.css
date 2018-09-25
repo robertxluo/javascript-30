@@ -18,9 +18,9 @@ body {
 .clock {
 	width: 30rem;
 	height: 30rem;
-	border: 20px solid white;
+	border: 0.3rem solid white;
 	border-radius: 50%;
-	margin: 50px auto;
+	margin: 10rem auto;
 	position: relative;
 	padding: 2rem;
 	box-shadow:
@@ -46,4 +46,10 @@ body {
 	transform-origin: 100%;
 	transform: rotate(90deg);
 	transition: all 0.05s;
+	transition-timing-function: cubic-bezier(0, 2.72, 0.58, 1);
+}
+
+.second-hand {
+	background-color: #AA3838;
+	height: 2px;
 }
