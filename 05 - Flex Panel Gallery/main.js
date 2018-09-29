@@ -1,14 +1,14 @@
 const panels = document.querySelectorAll(".panel")
 
+// Adds/remove class of 'open' when clicked
 const toggleOpen = () => {
-    console.log(event.target);
-    event.target.classList.toggle("open");
+    event.currentTarget.classList.toggle("open");
 };
 
 const toggleActive = (e) => {
     if(e.propertyName.includes("flex"))
     {
-        event.target.classList.toggle("open-active");
+        event.currentTarget.classList.toggle("open-active");
     }
 }
 
