@@ -12,3 +12,14 @@ const findMatches = (wordToMatch, cities) => {
         return place.city.match(regex) || place.state.match(regex);
     });
 };
+
+const displayMatches = () => {
+    const matchArray = findMatches(event.currentTarget.value, cities);
+    console.log(matchArray);
+};
+
+const searchInput = document.querySelector(".search");
+const suggestions = document.querySelector(".suggestions");
+
+searchInput.addEventListener("change", displayMatches);
+searchInput.addEventListener("keyup", displayMatches);
