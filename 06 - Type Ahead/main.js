@@ -16,9 +16,13 @@ const findMatches = (wordToMatch, cities) => {
 const displayMatches = () => {
     const matchArray = findMatches(event.currentTarget.value, cities);
     const html = matchArray.map(place => {
+        const regex = new RegExp(event.currentTarget.value, "gi");
+        const cityName = place.city.replace(regex, `<span class="hl">${event.currentTarget.value}</span>`)
+        const stateName = place.state.replace(regex, `<span class="hl">${event.currentTarget.value}</span>`)
+
         return `
             <li>
-                <span class="name">${place.city}, ${place.state}</span>
+                <span class="name">${cityName}, ${stateName}</span>
                 <span class="population">${place.population}</span>
             </li>
         `;
