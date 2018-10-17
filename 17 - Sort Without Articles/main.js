@@ -6,4 +6,7 @@ function strip(bandName) {
   return bandName.replace(/^(a |the |an )/i, '').trim();
 }
 
-console.log(sortedBands);
+document.querySelector('#bands').innerHTML = 
+  sortedBands
+    .map(band =>  `<li>${band}</li>`)
+    .join('');
